@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Alan Jiang - Production Engineer / SRE. A short engineering profile focused on production systems, automation, reliability, and open-source infrastructure work." />
+  <title>Alan Jiang - Production Engineer / SRE</title>
+  <style>
+    :root {
+      --bg: #f5f6f8;
+      --paper: #ffffff;
+      --ink: #15171a;
+      --muted: #626b78;
+      --line: #dadde4;
+      --soft: #f8f9fb;
+      --accent: #1f5fbf;
+      --max: 960px;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.48;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+
+    .page {
+      width: min(var(--max), calc(100% - 28px));
+      margin: 24px auto;
+      padding: 36px 40px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      box-shadow: 0 16px 45px rgba(21, 23, 26, 0.055);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1;
+    }
+
+    .title {
+      margin-top: 8px;
+      color: #2f3742;
+      font-size: 18px;
+      font-weight: 660;
+    }
+
+    .summary {
+      max-width: 690px;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+
+    .contact {
+      display: grid;
+      gap: 6px;
+      justify-items: end;
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .section {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    h2 {
+      color: #313946;
+      font-size: 13px;
+      font-weight: 780;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .content {
+      display: grid;
+      gap: 18px;
+    }
+
+    .lead {
+      color: #2d3540;
+      font-size: 16px;
+      font-weight: 620;
+    }
+
+    .text {
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .note {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--soft);
+    }
+
+    .note h3 {
+      font-size: 15.5px;
+      line-height: 1.25;
+    }
+
+    .note p {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .row {
+      display: grid;
+      gap: 7px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .row:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .row h3 {
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 620;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 6px 0;
+      color: #26303b;
+      font-size: 14.5px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 2px;
+      font-size: 14px;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .stack span {
+      padding: 5px 8px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: var(--soft);
+      color: #344050;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 26px 18px;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+      }
+
+      header,
+      .section-head,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        justify-items: start;
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <h1>Alan Jiang</h1>
+        <p class="title">Production Engineer / Site Reliability Engineer</p>
+        <p class="summary">This page is meant to add context beyond my resume. I like production engineering because it is close to real systems: traffic moves, capacity changes, alerts fire, migrations need rollback paths, and small tooling decisions can save many future on-call hours.</p>
+      </div>
+      <div class="contact" aria-label="Contact">
+        <span>Bellevue, WA</span>
+        <a href="mailto:haihanj99@gmail.com">haihanj99@gmail.com</a>
+        <a href="https://www.linkedin.com/in/haihan-jiang/">LinkedIn</a>
+        <a href="https://github.com/Haihan-Jiang">GitHub</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>How I Work</h2>
+        <div class="content">
+          <p class="lead">I am most interested in engineering work where correctness, operations, and automation meet.</p>
+          <div class="grid">
+            <article class="note">
+              <h3>Make production changes reversible</h3>
+              <p>I prefer staged rollout, health checks, observation windows, and a clear rollback path over one-shot changes that are hard to reason about during incidents.</p>
+            </article>
+            <article class="note">
+              <h3>Turn manual operations into systems</h3>
+              <p>When a workflow repeats, I look for the state machine behind it: inputs, validation, side effects, ownership, observability, and safe retry behavior.</p>
+            </article>
+            <article class="note">
+              <h3>Leave evidence for the next engineer</h3>
+              <p>Dashboards, audit logs, runbooks, and small validation tools matter because they turn production work from tribal knowledge into something reviewable.</p>
+            </article>
+            <article class="note">
+              <h3>Fix sharp edges in developer tooling</h3>
+              <p>My open-source work is usually small but practical: build integration fixes, reliability edge cases, clearer docs, and safer infrastructure defaults.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="field-notes">
+      <div class="section-head">
+        <h2>Field Notes</h2>
+        <div class="content">
+          <article class="row">
+            <h3>Gateway migration work taught me to treat rollout design as engineering, not ceremony.</h3>
+            <p class="sub">SHEIN production gateway infrastructure</p>
+            <p class="text">The interesting part of a migration is not only replacing machines or operating systems. It is deciding how traffic should move, what signal proves the new path is healthy, how long old nodes should remain useful, and what would make rollback obvious at 2 a.m.</p>
+          </article>
+
+          <article class="row">
+            <h3>Capacity automation is a reliability problem disguised as a workflow problem.</h3>
+            <p class="sub">Meta monetization data infrastructure</p>
+            <p class="text">A quota request can look like a ticket queue, but under the hood it needs validation, demand breakdown, state tracking, polling, alerts, ownership, and failure recovery. That is the type of backend infrastructure work I enjoy: making operational intent executable and observable.</p>
+          </article>
+
+          <article class="row">
+            <h3>I use open source as a way to practice engineering judgment in public.</h3>
+            <p class="sub">Google-maintained infrastructure and developer-tooling repositories</p>
+            <p class="text">The contributions I care about are usually not flashy. They make package metadata more correct, tests more robust when host capabilities differ, Terraform defaults safer, or docs clearer for the next person trying to integrate a tool.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Selected Proof</h2>
+        <div class="content">
+          <div class="grid">
+            <article class="note">
+              <h3>Production systems</h3>
+              <p>Experience across Nginx/APISIX gateways, AKS/Kubernetes-style platforms, Kafka, ZooKeeper, Elasticsearch, warehouse quota systems, and on-call workflows.</p>
+            </article>
+            <article class="note">
+              <h3>Automation and reliability</h3>
+              <p>Built workflow automation, service reliability controls, validation tooling, runbooks, dashboards, and scripts that reduced manual operational work.</p>
+            </article>
+            <article class="note">
+              <h3>Open-source examples</h3>
+              <p>Selected merged contributions are linked below. They show the type of practical infrastructure fixes I like making.</p>
+              <div class="links">
+                <a href="https://github.com/google/benchmark/pull/2198">benchmark pkg-config</a>
+                <a href="https://github.com/google/benchmark/pull/2204">benchmark perf counters</a>
+                <a href="https://github.com/google/stellar-engine/pull/68">Terraform defaults</a>
+                <a href="https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/pull/1445">cloud config</a>
+              </div>
+            </article>
+            <article class="note">
+              <h3>Roles I fit best</h3>
+              <p>SRE, Production Engineer, Infrastructure Engineer, Platform Engineer, Cloud/DevOps Engineer, and backend infrastructure roles close to production operations.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Tech</h2>
+        <div class="stack" aria-label="Technology stack">
+          <span>Python</span>
+          <span>C++</span>
+          <span>Java</span>
+          <span>Go</span>
+          <span>PHP</span>
+          <span>SQL</span>
+          <span>Bash</span>
+          <span>Linux</span>
+          <span>Kubernetes/AKS</span>
+          <span>Tupperware (Kubernetes-equivalence)</span>
+          <span>Azure</span>
+          <span>AWS</span>
+          <span>Terraform</span>
+          <span>Ansible</span>
+          <span>Nginx/APISIX</span>
+          <span>Consul/etcd</span>
+          <span>Kafka</span>
+          <span>ZooKeeper</span>
+          <span>Elasticsearch</span>
+          <span>Hive/Scuba</span>
+          <span>XDB</span>
+          <span>MWFS</span>
+          <span>Thrift/RPC</span>
+          <span>SLI/SLO</span>
+          <span>Incident response</span>
+          <span>Git/GitHub</span>
+          <span>CMake/pkg-config</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Alan Jiang - production systems, infrastructure automation, and reliability engineering
+    </footer>
+  </main>
+</body>
+</html>
