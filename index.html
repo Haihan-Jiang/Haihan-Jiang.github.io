@@ -365,11 +365,11 @@
       <div class="section-head">
         <h2>Current Build</h2>
         <div class="content">
-          <p class="lead">GKE AI Workload Observability Recipes is a runnable reference project for the kind of infrastructure work I want to keep doing: practical, reviewable, and close to production failure modes.</p>
+          <p class="lead">GKE AI Workload Observability Recipes is becoming a runnable incident lab for the kind of infrastructure work I want to keep doing: practical, reviewable, and close to production failure modes.</p>
           <div class="grid">
             <article class="note">
-              <h3>Runnable local demo</h3>
-              <p>The project sends a synthetic AI inference trace over OTLP/HTTP and includes a no-Docker fallback receiver, so the signal path can be demonstrated without a cloud account.</p>
+              <h3>Incident replay</h3>
+              <p>The project replays baseline traffic, cache-miss latency, dependency timeout, and rollout regression scenarios, then generates a local incident report.</p>
             </article>
             <article class="note">
               <h3>GKE production shape</h3>
@@ -381,12 +381,13 @@
             </article>
             <article class="note">
               <h3>Why it matters</h3>
-              <p>AI services still need ordinary production discipline: traces, Kubernetes context, durable delivery, safe rollout evidence, and clear debugging paths.</p>
+              <p>AI services still need ordinary production discipline: traces, Kubernetes context, durable delivery, safe rollout evidence, and incident narratives a team can act on.</p>
             </article>
           </div>
           <div class="links">
             <a href="https://github.com/Haihan-Jiang/gke-ai-workload-observability-recipes">project repo</a>
             <a href="https://github.com/Haihan-Jiang/gke-ai-workload-observability-recipes/blob/main/docs/case-study.md">case study</a>
+            <a href="https://github.com/Haihan-Jiang/gke-ai-workload-observability-recipes/blob/main/docs/architecture/incident-replay.md">incident replay architecture</a>
             <a href="https://github.com/Haihan-Jiang/gke-ai-workload-observability-recipes/blob/main/docs/google-oss-upstream.md">upstream PR tracker</a>
           </div>
         </div>
