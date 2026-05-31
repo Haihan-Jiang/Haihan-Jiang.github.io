@@ -49,8 +49,8 @@
 
     header {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
+      grid-template-columns: minmax(0, 1fr) 230px;
+      gap: 30px;
       padding-bottom: 24px;
       border-bottom: 1px solid var(--line);
       align-items: start;
@@ -85,10 +85,32 @@
     .contact {
       display: grid;
       gap: 6px;
-      justify-items: end;
+      margin-top: 18px;
       color: var(--muted);
       font-size: 14px;
       white-space: nowrap;
+    }
+
+    .portrait-card {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+    }
+
+    .portrait-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: 50% 44%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--soft);
+    }
+
+    .caption {
+      color: var(--muted);
+      font-size: 13px;
     }
 
     .section {
@@ -239,8 +261,11 @@
       }
 
       .contact {
-        justify-items: start;
         white-space: normal;
+      }
+
+      .portrait-card {
+        width: min(260px, 100%);
       }
     }
   </style>
@@ -251,14 +276,18 @@
       <div>
         <h1>Alan Jiang</h1>
         <p class="title">Production Engineer / Site Reliability Engineer</p>
-        <p class="summary">This page is meant to add context beyond my resume. I like production engineering because it is close to real systems: traffic moves, capacity changes, alerts fire, migrations need rollback paths, and small tooling decisions can save many future on-call hours.</p>
+        <p class="summary">This page is meant to add context beyond my resume. I like production engineering because it is close to real systems: traffic moves, capacity changes, alerts fire, migrations need rollback paths, and small tooling decisions can save many future on-call hours. I also like work that leaves a cleaner trail for the next engineer.</p>
+        <div class="contact" aria-label="Contact">
+          <span>Bellevue, WA</span>
+          <a href="mailto:haihanj99@gmail.com">haihanj99@gmail.com</a>
+          <a href="https://www.linkedin.com/in/haihan-jiang/">LinkedIn</a>
+          <a href="https://github.com/Haihan-Jiang">GitHub</a>
+        </div>
       </div>
-      <div class="contact" aria-label="Contact">
-        <span>Bellevue, WA</span>
-        <a href="mailto:haihanj99@gmail.com">haihanj99@gmail.com</a>
-        <a href="https://www.linkedin.com/in/haihan-jiang/">LinkedIn</a>
-        <a href="https://github.com/Haihan-Jiang">GitHub</a>
-      </div>
+      <figure class="portrait-card">
+        <img src="assets/alan-coast.jpg" alt="Illustrated portrait of Alan Jiang by the coast" />
+        <figcaption class="caption">Outside work, I like quiet coastlines. At work, I like systems that stay calm under load.</figcaption>
+      </figure>
     </header>
 
     <section class="section">
@@ -282,6 +311,25 @@
             <article class="note">
               <h3>Fix sharp edges in developer tooling</h3>
               <p>My open-source work is usually small but practical: build integration fixes, reliability edge cases, clearer docs, and safer infrastructure defaults.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Curiosity</h2>
+        <div class="content">
+          <p class="lead">The problems that keep my attention are usually practical, messy, and close to production.</p>
+          <div class="grid">
+            <article class="note">
+              <h3>How do we know a change is safe?</h3>
+              <p>I like building gates around real signals: health checks, diff checks, traffic weights, dashboards, and clear stop conditions.</p>
+            </article>
+            <article class="note">
+              <h3>What should be automated, and what should stay supervised?</h3>
+              <p>The best automation removes repeated work while keeping high-risk decisions visible, reviewable, and reversible.</p>
             </article>
           </div>
         </div>
