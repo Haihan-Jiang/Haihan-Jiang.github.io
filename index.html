@@ -365,11 +365,15 @@
       <div class="section-head">
         <h2>Current Build</h2>
         <div class="content">
-          <p class="lead">GKE AI Workload Observability Recipes is becoming a runnable incident lab for the kind of infrastructure work I want to keep doing: practical, reviewable, and close to production failure modes.</p>
+          <p class="lead">GKE AI Inference Reliability Lab is a runnable Kubernetes observability and reliability lab for the kind of infrastructure work I want to keep doing: practical, reviewable, and close to production failure modes.</p>
           <div class="grid">
             <article class="note">
               <h3>Incident replay</h3>
               <p>The project replays baseline traffic, cache-miss latency, dependency timeout, and rollout regression scenarios, then publishes sample evidence from the replay.</p>
+            </article>
+            <article class="note">
+              <h3>Reliability gate</h3>
+              <p>It evaluates the replay against SLO-style checks so the lab proves both healthy baseline behavior and expected incident classification.</p>
             </article>
             <article class="note">
               <h3>GKE production shape</h3>
@@ -388,6 +392,7 @@
             <a href="https://github.com/Haihan-Jiang/gke-ai-workload-observability-recipes">project repo</a>
             <a href="https://github.com/Haihan-Jiang/gke-ai-workload-observability-recipes/blob/main/docs/case-study.md">case study</a>
             <a href="https://github.com/Haihan-Jiang/gke-ai-workload-observability-recipes/blob/main/docs/evidence/sample-incident-report.md">sample incident report</a>
+            <a href="https://github.com/Haihan-Jiang/gke-ai-workload-observability-recipes/blob/main/docs/evidence/reliability-gate.md">reliability gate</a>
             <a href="https://github.com/Haihan-Jiang/gke-ai-workload-observability-recipes/blob/main/docs/architecture/incident-replay.md">incident replay architecture</a>
             <a href="https://github.com/Haihan-Jiang/gke-ai-workload-observability-recipes/blob/main/docs/google-oss-upstream.md">upstream PR tracker</a>
           </div>
