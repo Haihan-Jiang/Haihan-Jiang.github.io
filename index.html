@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Alan Jiang - Production Engineer / SRE. A short engineering profile focused on production systems, automation, reliability, observability, and open-source infrastructure work." />
+  <meta name="description" content="Alan Jiang - Production Engineer / SRE focused on Kubernetes, observability, infrastructure automation, production systems, and verified Google/Google Cloud open-source contributions." />
   <title>Alan Jiang - Production Engineer / SRE</title>
   <style>
     :root {
@@ -89,6 +89,35 @@
       color: var(--muted);
       font-size: 14px;
       white-space: nowrap;
+    }
+
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .proof-item {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--soft);
+    }
+
+    .proof-item strong {
+      display: block;
+      color: var(--ink);
+      font-size: 19px;
+      line-height: 1.1;
+    }
+
+    .proof-item span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.35;
     }
 
     .portrait-card {
@@ -256,7 +285,8 @@
 
       header,
       .section-head,
-      .grid {
+      .grid,
+      .proof-strip {
         grid-template-columns: 1fr;
       }
 
@@ -276,12 +306,27 @@
       <div>
         <h1>Alan Jiang</h1>
         <p class="title">Production Engineer / Site Reliability Engineer</p>
-        <p class="summary">This page is meant to add context beyond my resume. I like production engineering because it is close to real systems: traffic moves, capacity changes, alerts fire, migrations need rollback paths, and small tooling decisions can save many future on-call hours. I also like work that leaves a cleaner trail for the next engineer.</p>
+        <p class="summary">I build and debug production-adjacent infrastructure: Kubernetes/GKE observability, gateway reliability, operational automation, and small open-source fixes that make real systems safer to run.</p>
+        <div class="proof-strip" aria-label="Engineering proof points">
+          <div class="proof-item">
+            <strong>16</strong>
+            <span>merged PRs in Google and Google Cloud Platform maintained repositories</span>
+          </div>
+          <div class="proof-item">
+            <strong>GKE</strong>
+            <span>AI inference reliability lab with traces, incident replay, and SLO-style gates</span>
+          </div>
+          <div class="proof-item">
+            <strong>Prod</strong>
+            <span>gateway, data infra, runbook, dashboard, and automation experience</span>
+          </div>
+        </div>
         <div class="contact" aria-label="Contact">
           <span>Bellevue, WA</span>
           <a href="mailto:haihanj99@gmail.com">haihanj99@gmail.com</a>
           <a href="https://www.linkedin.com/in/haihan-jiang/">LinkedIn</a>
           <a href="https://github.com/Haihan-Jiang">GitHub</a>
+          <a href="https://github.com/Haihan-Jiang/Haihan-Jiang">GitHub profile README</a>
         </div>
       </div>
       <figure class="portrait-card">
@@ -415,8 +460,12 @@
             </article>
             <article class="note">
               <h3>Open-source examples</h3>
-              <p>Selected merged contributions are linked below. They show the type of practical infrastructure fixes I like making.</p>
+              <p>Selected merged contributions are linked below. They show practical infrastructure fixes across runtime, fuzzing, Kubernetes troubleshooting, cloud defaults, and build/test tooling.</p>
               <div class="links">
+                <a href="https://github.com/google/gvisor/pull/13276">gVisor cgroup</a>
+                <a href="https://github.com/google/syzkaller/pull/7420">syzkaller dashboard</a>
+                <a href="https://github.com/GoogleCloudPlatform/khi/pull/708">KHI slog</a>
+                <a href="https://github.com/google/go-containerregistry/pull/2318">containerregistry export</a>
                 <a href="https://github.com/google/benchmark/pull/2198">benchmark pkg-config</a>
                 <a href="https://github.com/google/benchmark/pull/2204">benchmark perf counters</a>
                 <a href="https://github.com/google/stellar-engine/pull/68">Terraform defaults</a>
